@@ -15,6 +15,7 @@
 		664E46601EBC59D60034EBE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664E465E1EBC59D60034EBE7 /* LaunchScreen.storyboard */; };
 		664E466B1EBC59D60034EBE7 /* CircleProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E466A1EBC59D60034EBE7 /* CircleProgressViewTests.m */; };
 		664E46761EBC59D60034EBE7 /* CircleProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46751EBC59D60034EBE7 /* CircleProgressViewUITests.m */; };
+		664E46851EBC5AA20034EBE7 /* WJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46841EBC5AA20034EBE7 /* WJProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		664E46711EBC59D60034EBE7 /* CircleProgressViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleProgressViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		664E46751EBC59D60034EBE7 /* CircleProgressViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressViewUITests.m; sourceTree = "<group>"; };
 		664E46771EBC59D60034EBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		664E46831EBC5AA20034EBE7 /* WJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJProgressView.h; sourceTree = "<group>"; };
+		664E46841EBC5AA20034EBE7 /* WJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				664E46541EBC59D60034EBE7 /* AppDelegate.m */,
 				664E46561EBC59D60034EBE7 /* ViewController.h */,
 				664E46571EBC59D60034EBE7 /* ViewController.m */,
+				664E46861EBC5AB70034EBE7 /* Progress */,
 				664E46591EBC59D60034EBE7 /* Main.storyboard */,
 				664E465C1EBC59D60034EBE7 /* Assets.xcassets */,
 				664E465E1EBC59D60034EBE7 /* LaunchScreen.storyboard */,
@@ -138,6 +142,15 @@
 				664E46771EBC59D60034EBE7 /* Info.plist */,
 			);
 			path = CircleProgressViewUITests;
+			sourceTree = "<group>";
+		};
+		664E46861EBC5AB70034EBE7 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				664E46831EBC5AA20034EBE7 /* WJProgressView.h */,
+				664E46841EBC5AA20034EBE7 /* WJProgressView.m */,
+			);
+			name = Progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +215,7 @@
 		664E46451EBC59D60034EBE7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WJ;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = WangJ;
 				TargetAttributes = {
@@ -273,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664E46851EBC5AA20034EBE7 /* WJProgressView.m in Sources */,
 				664E46581EBC59D60034EBE7 /* ViewController.m in Sources */,
 				664E46551EBC59D60034EBE7 /* AppDelegate.m in Sources */,
 				664E46521EBC59D60034EBE7 /* main.m in Sources */,
