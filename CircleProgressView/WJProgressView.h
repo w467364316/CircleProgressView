@@ -2,7 +2,7 @@
 //  WJProgressView.h
 //  CircleProgressView
 //
-//  Created by JianJian-Mac on 17/5/5.
+//  Created by JianJian on 17/5/5.
 //  Copyright © 2017年 WangJ. All rights reserved.
 //
 
@@ -36,6 +36,11 @@ typedef void(^ProgressEnd)();
  *  颜色分割位置数组
  */
 @property(nonatomic,strong)NSArray *locations;
+
+/**
+ *  隐藏百分比label
+ */
+- (void)hidePercent;
 
 /**
  *  设置创建图层

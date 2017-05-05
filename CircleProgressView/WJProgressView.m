@@ -2,7 +2,7 @@
 //  WJProgressView.m
 //  CircleProgressView
 //
-//  Created by JianJian-Mac on 17/5/5.
+//  Created by JianJian on 17/5/5.
 //  Copyright © 2017年 WangJ. All rights reserved.
 //
 
@@ -50,7 +50,7 @@
     self.colorLayer = [self creatGradientLayer];
     self.colorMaskLayer = [self creatMaskLayerWithLineWidth:self.lineWidth];
     self.colorLayer.mask = self.colorMaskLayer;
-//    self.colorMaskLayer.strokeEnd = 0.01;
+    self.colorMaskLayer.strokeEnd = 0.01;
     
     [self.layer addSublayer:self.colorLayer];
 }
@@ -79,7 +79,8 @@
     layer.colors = muColors;
     
     if (!self.locations) {
-        self.locations = [NSMutableArray arrayWithObjects:@0.5, @0.9,nil];
+        //随便设置两组分割点
+        self.locations = [NSMutableArray arrayWithObjects:@0.1, @0.9,nil];
     }
     layer.locations = self.locations;
     
@@ -98,13 +99,18 @@
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.frame = self.bounds;
     
-    UIBezierPath *path =  [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:self.bounds.size.width / 2.5 startAngle:DEGREES_TO_ANGLE(-90) endAngle:DEGREES_TO_ANGLE(270) clockwise:YES];
+    UIBezierPath *path =  [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2) radius:self.bounds.size.width / 2.5 startAngle:DEGREES_TO_ANGLE(-90) endAngle:DEGREES_TO_ANGLE(270) clockwise:YES]; //注意这里的半径,应该为宽度1/2-linewidth/2
     layer.lineWidth = self.lineWidth;
     layer.path = path.CGPath;
     layer.fillColor = [UIColor clearColor].CGColor; //设置填充颜色
     layer.strokeColor = [UIColor blackColor].CGColor; // 设置画笔颜色
     layer.lineCap = kCALineCapRound; // 设置线为圆角
     return layer;
+}
+
+- (void)hidePercent {
+
+    
 }
 
 - (void)reloadValue:(CGFloat)value {
