@@ -23,7 +23,7 @@
 {
     CGFloat _endValue;
 }
-@property(nonatomic,strong)CALayer *bglayer;
+
 @property(nonatomic,strong)CAGradientLayer *colorLayer;
 @property(nonatomic,strong)CAShapeLayer *bgMaskLayer;
 @property(nonatomic,strong)CAShapeLayer *colorMaskLayer;
@@ -33,7 +33,8 @@
 
 @implementation WJProgressView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     
     if (self = [super initWithFrame:frame]) {
         //设置默认颜色
@@ -42,15 +43,16 @@
     return self;
 }
 
-- (void)startProress {
+- (void)startProress
+{
     
     self.bgMaskLayer = [self creatMaskLayerWithLineWidth:self.lineWidth];
-    self.layer.mask = self.bgMaskLayer;
+//    self.layer.mask = self.bgMaskLayer;
     
     self.colorLayer = [self creatGradientLayer];
     self.colorMaskLayer = [self creatMaskLayerWithLineWidth:self.lineWidth];
-    self.colorLayer.mask = self.colorMaskLayer;
-    self.colorMaskLayer.strokeEnd = 0.01;
+//    self.colorLayer.mask = self.colorMaskLayer;
+//    self.colorMaskLayer.strokeEnd = 0.01;
     
     [self.layer addSublayer:self.colorLayer];
 }
@@ -60,11 +62,12 @@
  *
  *  @return CAGradientLayer
  */
-- (CAGradientLayer *)creatGradientLayer {
+- (CAGradientLayer *)creatGradientLayer
+{
     
     CAGradientLayer *layer = [CAGradientLayer layer];
     layer.frame = self.bounds;
-    NSMutableArray *muColors = [NSMutableArray array];
+    NSMutableArray *muColors = [NSMutableArray array];//颜色数组，放置CGColorref
     if (self.colors) {
         [self.colors enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([obj isKindOfClass:[UIColor class]]) {
@@ -73,6 +76,7 @@
             }
         }];
     }else {
+        //设置两组白色
         [muColors addObject:(id)[UIColor whiteColor].CGColor];
         [muColors addObject:(id)[UIColor whiteColor].CGColor];
     }
@@ -94,7 +98,8 @@
  *
  *  @return CAShapLayer
  */
-- (CAShapeLayer *)creatMaskLayerWithLineWidth:(CGFloat)lineWidth {
+- (CAShapeLayer *)creatMaskLayerWithLineWidth:(CGFloat)lineWidth
+{
     
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.frame = self.bounds;
@@ -108,12 +113,14 @@
     return layer;
 }
 
-- (void)hidePercent {
+- (void)hidePercent
+{
 
     
 }
 
-- (void)reloadValue:(CGFloat)value {
+- (void)reloadValue:(CGFloat)value
+{
 
     if (value <= 0.001) {
         value = 0.01;

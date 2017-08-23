@@ -25,29 +25,34 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.progress = [[WJProgressView alloc] initWithFrame:CGRectMake(WIDTH/2 - 100, HEIGHT/2 - 100, 200, 200)];
-//    self.progress.colors = @[COLOR(100, 150, 0, 1),COLOR(0, 150, 130, 1),COLOR(60, 0, 190, 1)];
+    self.progress.colors = @[COLOR(100, 150, 0, 1),COLOR(0, 150, 130, 1),COLOR(60, 0, 190, 1)];
+    self.progress.backgroundColor = [UIColor yellowColor];
+    self.progress.locations = @[@0.1,@0.5,@0.9];
+    
     self.progress.lineWidth = 20;
-//    self.progress.backgroundColor = [UIColor yellowColor];
     [self.progress startProress];
     
     [self.view addSubview: self.progress];
     
-    self.sliderView = [[UISlider alloc] initWithFrame:CGRectMake(100, 100, WIDTH - 200, 50)];
+    self.sliderView = [[UISlider alloc] initWithFrame:CGRectMake(100, 130, WIDTH - 200, 50)];
     [self.sliderView addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.sliderView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 100, 100);
+    button.frame = CGRectMake(0, 20, 100, 100);
+    button.center = CGPointMake(WIDTH/2, 20+ 50);
     [button setTitle:@"加载" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor redColor];
+    button.layer.cornerRadius = 50;
+    button.backgroundColor = [UIColor blueColor];
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+
     
 }
 
 - (void)sliderChanged:(UISlider *)slider {
 
-    [self.progress reloadValue:slider.value];
+//    [self.progress reloadValue:slider.value];
 }
 
 - (void)buttonClicked:(UIButton *)button {

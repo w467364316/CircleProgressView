@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "WJViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    ViewController *controller = [[ViewController alloc] init];
+//    WJViewController *controller = [[WJViewController alloc] init];
+//    
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -10,12 +10,12 @@
 		664E46521EBC59D60034EBE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46511EBC59D60034EBE7 /* main.m */; };
 		664E46551EBC59D60034EBE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46541EBC59D60034EBE7 /* AppDelegate.m */; };
 		664E46581EBC59D60034EBE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46571EBC59D60034EBE7 /* ViewController.m */; };
-		664E465B1EBC59D60034EBE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664E46591EBC59D60034EBE7 /* Main.storyboard */; };
 		664E465D1EBC59D60034EBE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664E465C1EBC59D60034EBE7 /* Assets.xcassets */; };
 		664E46601EBC59D60034EBE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664E465E1EBC59D60034EBE7 /* LaunchScreen.storyboard */; };
 		664E466B1EBC59D60034EBE7 /* CircleProgressViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E466A1EBC59D60034EBE7 /* CircleProgressViewTests.m */; };
 		664E46761EBC59D60034EBE7 /* CircleProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46751EBC59D60034EBE7 /* CircleProgressViewUITests.m */; };
 		664E46851EBC5AA20034EBE7 /* WJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664E46841EBC5AA20034EBE7 /* WJProgressView.m */; };
+		6664605A1ED9613400FB5781 /* WJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666460591ED9613400FB5781 /* WJViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		664E46541EBC59D60034EBE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		664E46561EBC59D60034EBE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		664E46571EBC59D60034EBE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		664E465A1EBC59D60034EBE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		664E465C1EBC59D60034EBE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664E465F1EBC59D60034EBE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664E46611EBC59D60034EBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +53,8 @@
 		664E46771EBC59D60034EBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664E46831EBC5AA20034EBE7 /* WJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJProgressView.h; sourceTree = "<group>"; };
 		664E46841EBC5AA20034EBE7 /* WJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJProgressView.m; sourceTree = "<group>"; };
+		666460581ED9613400FB5781 /* WJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJViewController.h; sourceTree = "<group>"; };
+		666460591ED9613400FB5781 /* WJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +109,9 @@
 				664E46541EBC59D60034EBE7 /* AppDelegate.m */,
 				664E46561EBC59D60034EBE7 /* ViewController.h */,
 				664E46571EBC59D60034EBE7 /* ViewController.m */,
+				666460581ED9613400FB5781 /* WJViewController.h */,
+				666460591ED9613400FB5781 /* WJViewController.m */,
 				664E46861EBC5AB70034EBE7 /* Progress */,
-				664E46591EBC59D60034EBE7 /* Main.storyboard */,
 				664E465C1EBC59D60034EBE7 /* Assets.xcassets */,
 				664E465E1EBC59D60034EBE7 /* LaunchScreen.storyboard */,
 				664E46611EBC59D60034EBE7 /* Info.plist */,
@@ -262,7 +264,6 @@
 			files = (
 				664E46601EBC59D60034EBE7 /* LaunchScreen.storyboard in Resources */,
 				664E465D1EBC59D60034EBE7 /* Assets.xcassets in Resources */,
-				664E465B1EBC59D60034EBE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6664605A1ED9613400FB5781 /* WJViewController.m in Sources */,
 				664E46851EBC5AA20034EBE7 /* WJProgressView.m in Sources */,
 				664E46581EBC59D60034EBE7 /* ViewController.m in Sources */,
 				664E46551EBC59D60034EBE7 /* AppDelegate.m in Sources */,
@@ -326,14 +328,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		664E46591EBC59D60034EBE7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				664E465A1EBC59D60034EBE7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		664E465E1EBC59D60034EBE7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,6 +516,7 @@
 				664E467C1EBC59D60034EBE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664E467D1EBC59D60034EBE7 /* Build configuration list for PBXNativeTarget "CircleProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +525,7 @@
 				664E467F1EBC59D60034EBE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		664E46801EBC59D60034EBE7 /* Build configuration list for PBXNativeTarget "CircleProgressViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +534,7 @@
 				664E46821EBC59D60034EBE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
