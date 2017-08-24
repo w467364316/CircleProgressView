@@ -38,11 +38,6 @@ typedef void(^ProgressEnd)();
 @property(nonatomic,strong)NSArray *locations;
 
 /**
- *  隐藏百分比label
- */
-- (void)hidePercent;
-
-/**
  *  设置创建图层
  */
 - (void)startProress;
@@ -64,4 +59,9 @@ typedef void(^ProgressEnd)();
  *  @param endBlock   动画结束回调
  */
 - (void)setprogressFromValue:(CGFloat)beginValue endValue:(CGFloat)endValue duration:(CGFloat)duration strokeType:(WJStrokeType)type end:(ProgressEnd)endBlock;
+
+/**
+ *  隐藏百分比label
+ */
+- (void)hidePercentState:(BOOL)state;
 @end
